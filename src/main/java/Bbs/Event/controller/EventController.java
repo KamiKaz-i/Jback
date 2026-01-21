@@ -2,8 +2,9 @@ package Bbs.Event.controller;
 
 import Bbs.Event.dto.EventRequest;
 import Bbs.Event.dto.EventResponse;
-import Bbs.Event.entity.Event;
 import Bbs.Event.service.EventService;
+import jakarta.validation.Valid;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -27,7 +28,7 @@ public class EventController {
     }
 
     @PostMapping("/events")
-    public EventResponse createEvent(@RequestBody EventRequest event){
-        return eventService.createEvent(event);
+    public ResponseEntity<?> createEvent(@RequestBody @Valid EventRequest event){
+        return ResponseEntity.ok(eventService.createEvent(event));
     }
 }

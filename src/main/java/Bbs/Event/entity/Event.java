@@ -1,6 +1,7 @@
 package Bbs.Event.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
 
 import java.time.LocalDateTime;
 
@@ -13,6 +14,7 @@ public class Event {
     private Long id;
 
     @Column(nullable = false)
+    @NotBlank(message="description is mandatory")
 
     private String description;
 

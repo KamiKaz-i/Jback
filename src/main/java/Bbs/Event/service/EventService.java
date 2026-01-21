@@ -27,9 +27,8 @@ public class EventService {
         return eventList.stream().map(event -> eventMapper.entityToDto(event)).toList();
     }
     public EventResponse createEvent(EventRequest request){
-
-        Event event = eventMapper.dtoToEntity(request);
-        Event e = eventRepository.save(event);
-        return eventMapper.entityToDto(e);
+            Event event = eventMapper.dtoToEntity(request);
+            Event e = eventRepository.save(event);
+            return eventMapper.entityToDto(e);
     }
 }

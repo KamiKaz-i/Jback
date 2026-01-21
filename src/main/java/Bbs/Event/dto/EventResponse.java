@@ -8,10 +8,11 @@ import java.time.LocalDateTime;
 
 public record EventResponse(String description,
                             @JsonProperty("total_tickets")
-                                  int totalTickets,
+                            int totalTickets,
                             boolean isFinished,
                             long id,
                             EventType type,
                             @JsonFormat(pattern = "yyyy-MM-dd")
-                                  LocalDateTime date) {
+                            LocalDateTime date
+    ) {
 }
