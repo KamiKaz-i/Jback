@@ -89,4 +89,7 @@ public class Event {
     public void setFinished(boolean finished) {
         isFinished = finished;
     }
+
+    public void setId(long eventId) {
+        this.id = eventId;    }
 }

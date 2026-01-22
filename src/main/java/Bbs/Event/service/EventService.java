@@ -5,30 +5,32 @@ import Bbs.Event.dto.EventResponse;
 import Bbs.Event.entity.Event;
 import Bbs.Event.mapper.EventMapper;
 import Bbs.Event.repository.EventRepository;
+import Bbs.exception.ResourceNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class EventService {
     private final EventRepository eventRepository;
     private final EventMapper eventMapper;
 
-    EventService(EventRepository eventRepository, EventMapper eventMapper){
+    public EventService(EventRepository eventRepository, EventMapper eventMapper){
         this.eventRepository=eventRepository;
         this.eventMapper = eventMapper;
     }
     public EventResponse getEvent(long id){
-        Event event = eventRepository.getEventById(id);
-        return eventMapper.entityToDto(event);
+        Optional<Event> event = eventRepository.findById(id);
+        return event.map(eventMapper::entityToDto).orElseThrow(()-> new ResourceNotFoundException("event","id",id));
     }
     public List<EventResponse> getEvents(){
         List<Event> eventList = eventRepository.findAll();
-        return eventList.stream().map(event -> eventMapper.entityToDto(event)).toList();
+        return eventList.stream().map(eventMapper::entityToDto).toList();
     }
     public EventResponse createEvent(EventRequest request){
-            Event event = eventMapper.dtoToEntity(request);
-            Event e = eventRepository.save(event);
-            return eventMapper.entityToDto(e);
+            Event eventEntity = eventMapper.dtoToEntity(request);
+            Event event = eventRepository.save(eventEntity);
+            return eventMapper.entityToDto(event);
     }
 }

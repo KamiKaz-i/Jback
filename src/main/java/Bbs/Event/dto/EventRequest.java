@@ -9,6 +9,7 @@ import java.time.LocalDateTime;
 
 public record EventRequest(
         @NotBlank(message="description is mandatory")
+
         String description,
 
         @JsonProperty("total_tickets")
