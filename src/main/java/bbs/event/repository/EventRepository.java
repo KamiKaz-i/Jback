@@ -1,9 +1,8 @@
-package Bbs.Event.repository;
+package bbs.event.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import Bbs.Event.entity.Event;
+import bbs.event.entity.Event;
 @Repository
 public interface EventRepository extends JpaRepository<Event,Long> {
-    Event getEventById(long i);
 }

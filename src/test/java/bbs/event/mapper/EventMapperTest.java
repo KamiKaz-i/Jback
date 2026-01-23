@@ -1,8 +1,8 @@
-package Bbs.Event.mapper;
+package bbs.event.mapper;
 
-import Bbs.Event.dto.EventResponse;
-import Bbs.Event.entity.Event;
-import Bbs.Event.entity.EventType;
+import bbs.event.dto.EventResponse;
+import bbs.event.entity.Event;
+import bbs.event.entity.EventType;
 import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.*;

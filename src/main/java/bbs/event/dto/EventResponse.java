@@ -1,6 +1,6 @@
-package Bbs.Event.dto;
+package bbs.event.dto;
 
-import Bbs.Event.entity.EventType;
+import bbs.event.entity.EventType;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
 

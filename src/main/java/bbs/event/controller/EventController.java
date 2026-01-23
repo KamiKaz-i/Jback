@@ -1,8 +1,8 @@
-package Bbs.Event.controller;
+package bbs.event.controller;
 
-import Bbs.Event.dto.EventRequest;
-import Bbs.Event.dto.EventResponse;
-import Bbs.Event.service.EventService;
+import bbs.event.dto.EventRequest;
+import bbs.event.dto.EventResponse;
+import bbs.event.service.EventService;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,7 +16,7 @@ public class EventController {
     public EventController(EventService eventService){
         this.eventService = eventService;
     }
-    @GetMapping("events/{id}")
+    @GetMapping("/events/{id}")
 
     public ResponseEntity<EventResponse> getEvent(@PathVariable("id") Long id){
         EventResponse event = eventService.getEvent(id);

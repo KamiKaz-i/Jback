@@ -1,22 +1,20 @@
-package Bbs.Event.service;
+package bbs.event.service;
 
-import Bbs.Event.dto.EventRequest;
-import Bbs.Event.dto.EventResponse;
-import Bbs.Event.entity.Event;
-import Bbs.Event.entity.EventType;
-import Bbs.Event.mapper.EventMapper;
-import Bbs.Event.repository.EventRepository;
-import Bbs.exception.ResourceNotFoundException;
-import org.junit.jupiter.api.BeforeAll;
+import bbs.event.dto.EventRequest;
+import bbs.event.dto.EventResponse;
+import bbs.event.entity.Event;
+import bbs.event.entity.EventType;
+import bbs.event.mapper.EventMapper;
+import bbs.event.repository.EventRepository;
+import bbs.exception.ResourceNotFoundException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import static org.mockito.Mockito.*;
-import org.mockito.Mockito;
+
 import org.mockito.junit.jupiter.MockitoExtension;
-import org.springframework.beans.factory.BeanRegistrarDslMarker;
 
 import java.time.LocalDateTime;
 import java.util.List;

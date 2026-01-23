@@ -1,4 +1,4 @@
-package Bbs.Event.entity;
+package bbs.event.entity;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;

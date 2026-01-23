@@ -1,8 +1,8 @@
-package Bbs.Event.mapper;
+package bbs.event.mapper;
 
-import Bbs.Event.dto.EventRequest;
-import Bbs.Event.dto.EventResponse;
-import Bbs.Event.entity.Event;
+import bbs.event.dto.EventRequest;
+import bbs.event.dto.EventResponse;
+import bbs.event.entity.Event;
 import org.springframework.stereotype.Component;
 
 @Component

@@ -1,13 +1,14 @@
-package Bbs.Event.service;
+package bbs.event.service;
 
-import Bbs.Event.dto.EventRequest;
-import Bbs.Event.dto.EventResponse;
-import Bbs.Event.entity.Event;
-import Bbs.Event.mapper.EventMapper;
-import Bbs.Event.repository.EventRepository;
-import Bbs.exception.ResourceNotFoundException;
+import bbs.event.dto.EventRequest;
+import bbs.event.dto.EventResponse;
+import bbs.event.entity.Event;
+import bbs.event.mapper.EventMapper;
+import bbs.event.repository.EventRepository;
+import bbs.exception.ResourceNotFoundException;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -15,7 +16,7 @@ import java.util.Optional;
 public class EventService {
     private final EventRepository eventRepository;
     private final EventMapper eventMapper;
-
+    List<String> lista = new ArrayList<>();
     public EventService(EventRepository eventRepository, EventMapper eventMapper){
         this.eventRepository=eventRepository;
         this.eventMapper = eventMapper;

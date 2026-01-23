@@ -1,6 +1,6 @@
-package Bbs.Event.dto;
+package bbs.event.dto;
 
-import Bbs.Event.entity.EventType;
+import bbs.event.entity.EventType;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
@@ -13,7 +13,7 @@ public record EventRequest(
         String description,
 
         @JsonProperty("total_tickets")
-        @Min(value = 1, message = "minium ammount of tickets is 1")
+        @Min(value = 1, message = "minium amount of tickets is 1")
         int totalTickets,
         EventType type,
         LocalDateTime date) {

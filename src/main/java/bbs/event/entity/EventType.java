@@ -1,4 +1,4 @@
-package Bbs.Event.entity;
+package bbs.event.entity;
 
 public enum EventType {
     Concert,
