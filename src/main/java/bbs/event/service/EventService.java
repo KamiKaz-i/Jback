@@ -16,7 +16,6 @@ import java.util.Optional;
 public class EventService {
     private final EventRepository eventRepository;
     private final EventMapper eventMapper;
-    List<String> lista = new ArrayList<>();
     public EventService(EventRepository eventRepository, EventMapper eventMapper){
         this.eventRepository=eventRepository;
         this.eventMapper = eventMapper;

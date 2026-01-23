@@ -13,7 +13,7 @@ public record EventRequest(
         String description,
 
         @JsonProperty("total_tickets")
-        @Min(value = 1, message = "minium amount of tickets is 1")
+        @Min(value = 1, message = "minimum amount of tickets is 1")
         int totalTickets,
         EventType type,
         LocalDateTime date) {
